@@ -23,8 +23,13 @@ game_is_on = True
 while game_is_on:
 	scn.update()
 	time.sleep(0.1)
-	for s in segs:
-		s.forward(20)
+
+	for seg_num in range(len(segs) - 1, 0, -1):
+		new_x = segs[seg_num - 1].xcor()
+		new_y = segs[seg_num - 1].ycor()
+		segs[seg_num].goto(new_x, new_y)
+	segs[0].forward(20)
+	segs[0].left(10)
 
 # ---
 scn.exitonclick()  # Exit on clic
