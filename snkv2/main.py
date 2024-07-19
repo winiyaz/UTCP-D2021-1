@@ -1,4 +1,5 @@
-# D20 -
+# This is the second version of the code , being made here for further work
+
 import time
 from turtle import Turtle, Screen
 
