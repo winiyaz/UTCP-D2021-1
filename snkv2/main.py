@@ -13,6 +13,12 @@ scn.tracer(0)
 
 snake = Snake()
 
+scn.listen()
+scn.onkey(snake.up, "Up")
+scn.onkey(snake.down, "Down")
+scn.onkey(snake.left, "Left")
+scn.onkey(snake.right, "Right")
+
 game_is_on = True
 while game_is_on:
 	scn.update()
