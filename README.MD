@@ -26,3 +26,4 @@ N | What
 [`Snk1`](./Snk1) | 1st version of SnGa
 [`Snk2`](./snkv2) | MainWork for snk
 [`Snk3`](./snkv3) | Finishing sn with inheritnce and more licking
+[`exp`](./exp) | Related experiments, code taken from AI most
