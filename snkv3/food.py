@@ -16,6 +16,7 @@ class Food(Turtle):
 		self.refresh()
 
 	def refresh(self):
+		"""Refresh screen to score gets updates"""
 		random_x = rp.randint(-240, 240)
 		random_y = rp.randint(-240, 240)
 		self.goto(random_x, random_y)

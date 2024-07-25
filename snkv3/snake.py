@@ -21,13 +21,19 @@ class Snake:
 	def create_snake(self):
 		"""Setting the shape and color"""
 		for pos in STARTING_POSITIONS:
-			new_seg = Turtle("square")
-			new_seg.speed("fast")
-			new_seg.color("#db2777")
-			# new_seg.write("LickPussy", font=("Arial", 16, "normal"))
-			new_seg.penup()
-			new_seg.goto(pos)
-			self.segments.append(new_seg)
+			self.add_segment(pos)
+
+	def add_segment(self, position):
+		new_seg = Turtle("square")
+		new_seg.speed("fast")
+		new_seg.color("#db2777")
+		new_seg.penup()
+		new_seg.goto(position)
+		self.segments.append(new_seg)
+
+	def extend(self):
+		"""Add new segment to snake"""
+		self.add_segment(self.segments[-1].position())
 
 	def move(self):
 		"""Moving the squares"""
@@ -38,19 +44,21 @@ class Snake:
 		self.head.forward(MOVE_DISTANCE)
 
 	def up(self):
+		"""Press UP key"""
 		if self.head.heading() != DOWN:
 			self.head.setheading(UP)
 
 	def down(self):
+		"""Press DOWN Key """
 		if self.head.heading() != UP:
 			self.head.setheading(DOWN)
 
 	def left(self):
+		"""Press RIGHT key"""
 		if self.head.heading() != RIGHT:
 			self.head.setheading(LEFT)
 
 	def right(self):
+		"""Press LEFT key"""
 		if self.head.heading() != LEFT:
 			self.head.setheading(RIGHT)
-
-
