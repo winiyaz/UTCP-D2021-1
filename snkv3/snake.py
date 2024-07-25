@@ -24,7 +24,7 @@ class Snake:
 			new_seg = Turtle("square")
 			new_seg.speed("fast")
 			new_seg.color("#db2777")
-			new_seg.write("Hello, Turtle!", font=("Arial", 16, "normal"))
+			new_seg.write("LickPussy", font=("Arial", 16, "normal"))
 			new_seg.penup()
 			new_seg.goto(pos)
 			self.segments.append(new_seg)
