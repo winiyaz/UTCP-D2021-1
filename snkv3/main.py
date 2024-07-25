@@ -36,6 +36,6 @@ while game_is_on:
 		print('nom nom nom ')
 		food.refresh()
 
-# ---
+# --- #
 scn.exitonclick()  # Exit on clic
 # ---
