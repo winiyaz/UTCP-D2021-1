@@ -1,6 +1,7 @@
 # This is the second version of the code , being made here for further work
 
 import time
+import turtle
 from turtle import Screen
 
 from food import Food
@@ -30,9 +31,7 @@ while game_is_on:
 	time.sleep(0.1)
 	snake.move()
 
-	# Detect Collision of the snake with food
-
-
+# Detect Collision of the snake with food
 
 # ---
 scn.exitonclick()  # Exit on clic
