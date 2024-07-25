@@ -1,10 +1,10 @@
 # This is the second version of the code , being made here for further work
 
 import time
-import turtle
 from turtle import Screen
 
 from food import Food
+from score import Score
 from snake import Snake
 
 scn = Screen()
@@ -13,8 +13,10 @@ scn.bgcolor("#020617")
 scn.title("PussyJuices")
 scn.tracer(0)
 
+# Initialize classes from files
 snake = Snake()
 food = Food()
+score = Score()
 
 scn.listen()
 scn.onkey(snake.up, "Up")
@@ -33,8 +35,9 @@ while game_is_on:
 
 	# Detect Collision of the snake with food
 	if snake.head.distance(food) < 15:
-		print('nom nom nom ')
+		print('nom nom nom')
 		food.refresh()
+		score.increase_score()
 
 # --- #
 scn.exitonclick()  # Exit on clic
